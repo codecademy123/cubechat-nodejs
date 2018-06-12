@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CubeChat</title>
+		<link href="/client/style.css" rel="stylesheet" type="text/css"></link>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td colspan="2">
+					<center>
+						<h1>CubeChat</h1>
+						<form id="login">
+							Username: <input id="username" required pattern=".{1,15}" title="max 15 characters">
+							<input type="submit" value="Play">
+						</form>
+					</center>
+					<br />
+				</td>
+			</tr>
+			<tr>
+				<td rowspan="2">
+					<canvas id="canvas"></canvas>
+				</td>
+				<td>
+				<div id="messageBox"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<form id="post">
+					</form>
+				</td>
+			</tr>
+		</table>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+		<script type="text/javascript" src="/client/main.js"></script>
+	</body>
+</html>

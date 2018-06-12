@@ -1,0 +1,17 @@
+canvas {
+	border:1px solid black;
+}
+body {
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+}
+#messageBox {
+	overflow:auto;
+	line-height:1.4;
+	height: 500px;
+	width:525px;
+	border: 1px solid black;
+}
