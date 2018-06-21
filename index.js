@@ -1,13 +1,12 @@
 var msgs = ["<b>Use WASD to move around and chat with your friends!</b>"];
 var express = require("express");
 var app = express();
-var serv = app.listen(1019);
+var serv = app.listen(process.env.PORT, "0.0.0.0");
 var io = require("socket.io").listen(serv);
 app.get("/",function(req, res) {
 	res.sendFile(__dirname + "/client/index.html");
 });
 app.use("/client", express.static(__dirname + "/client"));
-serv.listen(process.env.PORT);
 console.log("Server started");
 function getRandomColor() {
 	var letters = "0123456789ABCDEF";
